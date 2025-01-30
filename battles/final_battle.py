@@ -49,7 +49,7 @@ def run_battle():
             print("Game over.")
 
             while True:
-                again = input("Try again? (yes/no): ").strip().lower()
+                again = input("\nTry again? (yes/no): ").strip().lower()
                 if again == "yes":
                     subprocess.run(["python", "gorlok.py"])
                     break

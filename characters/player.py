@@ -2,9 +2,9 @@
 
 from weapons.melee import rusty_spoon
 
-def player():
-    name = "Player"
-    hp = 100
-    armor = 2
-    weapon = rusty_spoon
-    return
+class player:
+    def __init__(self):
+        self.name = "Player"
+        self.hp = 100
+        self.armor = None
+        self.weapon = rusty_spoon

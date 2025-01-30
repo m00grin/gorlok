@@ -11,9 +11,10 @@ STYLES = {
 }
 
 def styled_text(text, style=None):
-    return f"{STYLES.get(style, '')}{text}{STYLES['reset']}" if style else text
+    return f"{STYLES.get(style, '')}{text}{STYLES['reset']}"
 
-def typewriter(text, speed=0.05):
+def typewriter(text, speed=0.05, style=None):
+    styled = styled_text(text, style)
     for char in styled:
         sys.stdout.write(char)
         sys.stdout.flush()

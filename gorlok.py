@@ -32,15 +32,14 @@ def mixed_type(lines):
             type_narrate(text)
         elif line_type == 'dialogue':
             type_dialogue(text)
-        elif line_type == 'text':
+        elif line_type == 'text'
             type_text(text)
 
         if "..." in text:
             time.sleep(1)
-
 print("\n")
 print("\033[1;31m- Welcome to Gorlok: Origins of Icram -\033[0m")
-print("\n")
+print()
 intro_dialogue_seq = [
     {'type': 'narrate', 'text': "The Narrator stands over you as you open your weary eyes\n"},
     {'type': 'text', 'text': "..."}

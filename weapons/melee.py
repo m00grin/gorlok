@@ -1,15 +1,11 @@
 # melee weapon attributes
 
-def nether_axe():
-    name = "Nether Axe"
-    damage = 40
-    enchantment = 3
-    condition = 1
-    return
+class nether_axe:
+    def __init__(self):
+        self.name = "Nether Axe"
+        self.damage = 130
 
-def rusty_spoon():
-    name = "Rusty Spoon"
-    damage = 10
-    enchantment = 0
-    condition = 1
-    return
+class rusty_spoon:
+    def __init__(self):
+        self.name = "Rusty Spoon"
+        self.damage = 30

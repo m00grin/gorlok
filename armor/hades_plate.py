@@ -1,7 +1,6 @@
 # This file contains the hades_plate class
 
-def hades_plate():
-    name = "Plate Armor of Hades"
-    defense = 3
-    condition = 1
-    return
+class hades_plate:
+    def __init__(self):
+        self.name = "Plate Armor of Hades"
+        self.defense = 1.3

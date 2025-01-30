@@ -8,8 +8,10 @@ import subprocess
 from characters.enemies import gorlok
 from characters.player import player
 from weapons import melee
+from utils.text_utils import typewriter, styled_text
+from dialogue.dialogue import 
 
-def run_battle():
+def run_battle1():
     # Final battle sequence
     
     enemy = gorlok()
@@ -19,7 +21,7 @@ def run_battle():
     print("He sneers at you and blows green snot from his nose.")
     print("...")
 
-run_battle()
+run_battle1()
 
 #     while enemy_hp > 0:
 #         atk_1 = input(f"Do you want to swing your enchanted sword at {enemy_name}? ").strip().lower()
