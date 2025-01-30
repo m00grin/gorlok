@@ -39,6 +39,8 @@ def mixed_type(lines):
             time.sleep(1)
 
 print("\n")
+print("\033[1;31m- Welcome to Gorlok: Origins of Icram -\033[0m")
+print("\n")
 intro_dialogue_seq = [
     {'type': 'narrate', 'text': "The Narrator stands over you as you open your weary eyes\n"},
     {'type': 'text', 'text': "..."}
