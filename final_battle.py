@@ -1,4 +1,4 @@
-# simple fighting game test
+# final battle component of Gorlok game
 
 def enchanted_sword(sword_dmg, enchant_str, weapon_cond, enemy_armor):
     enchanted_dmg = sword_dmg + enchant_str * weapon_cond
