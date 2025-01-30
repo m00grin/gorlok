@@ -1,12 +1,17 @@
 # final battle component of Gorlok game
 
+import sys
+import time
+import subprocess
+
 def enchanted_sword(sword_dmg, enchant_str, weapon_cond, enemy_armor):
     enchanted_dmg = sword_dmg + enchant_str * weapon_cond
     new_enchanted_dmg = enchanted_dmg * enemy_armor
     return new_enchanted_dmg
 
-while True:
-
+def run_battle():
+    # Final battle sequence
+    
     enemy_name = "Gorlok"
     enemy_hp = 100
     sword_dmg = 20
@@ -14,12 +19,12 @@ while True:
     weapon_cond = 1
     enemy_armor = 1
 
-    print(f"{enemy_name} has {enemy_hp} hitpoints.")
+    print(f"\n{enemy_name} has {enemy_hp} hitpoints.")
     print("...")
     print("He sneers at you and blows green snot from his nose.")
     print("...")
 
-    while enemy_hp >0:
+    while enemy_hp > 0:
         atk_1 = input(f"Do you want to swing your enchanted sword at {enemy_name}? ").strip().lower()
     
         if atk_1 == "yes":
@@ -41,13 +46,22 @@ while True:
             print(f"{enemy_name} kills you.")
             print("Womp womp.")
             print("...")
-            again = input("Go again? ")
-            if again == "yes":
-                break
-            else:
-                print("...")
-                print("Coward. Game over.")
-                exit()
+            print("Game over.")
+
+            while True:
+                again = input("Try again? (yes/no): ").strip().lower()
+                if again == "yes":
+                    subprocess.run(["python", "gorlok.py"])
+                    break
+                elif again == "no":
+                    print("...")
+                    print("Coward. Game over.")
+                    exit()
+                    break
+                else:
+                    print("...")
+                    print("Huh?\n")
+                    continue
         else:
             print("...")
             print(f"It's a 'yes' or 'no' moment, friend. {enemy_name} is impatient and unimpressed, but still alive.")
@@ -59,7 +73,7 @@ while True:
             break
 
         if enemy_hp < 50 and enemy_hp > 0:
-            enemy_hp = int(enemy_hp *1.03)
+            enemy_hp = int(enemy_hp * 1.03)
             if enemy_hp == 1:
                 print(f"{enemy_name} sips dat sweet, sweet health potion. He now has {int(enemy_hp)} hitpoint.")
             else:
@@ -69,4 +83,13 @@ while True:
         print("...")
         print(f"{enemy_name}'s family gathers around his motionless corpse.")
         print("...")
-        exit()
+        newgame = input("Start new game? ")
+        if newgame == "yes":
+            subprocess.run(["python", "gorlok.py"])
+        else:
+            print("\nYou scared-ass bitch!")
+            print("\nGame over..")
+            exit()
+
+if __name__ == "__main__":
+    run_battle()

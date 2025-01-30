@@ -1,13 +1,14 @@
 import sys
 import time
+from battles.final_battle import run_battle
 
-def type_narrate(text, delay=0.06):
+def type_narrate(text, delay=0.05):
     for char in text:
         sys.stdout.write("\033[3m" + char + "\033[0m")
         sys.stdout.flush()
         time.sleep(delay)
 
-def type_dialogue(text, delay=0.06):
+def type_dialogue(text, delay=0.03):
     sys.stdout.write('"')
     for char in text:
         sys.stdout.write(char)
@@ -16,13 +17,11 @@ def type_dialogue(text, delay=0.06):
     sys.stdout.write('"')
     sys.stdout.flush()
 
-def type_text(text, delay=0.06):
+def type_text(text):
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(delay)
     sys.stdout.write('')
-    sys.stdout.flush()
 
 def mixed_type(lines):
     for line in lines:
@@ -39,11 +38,20 @@ def mixed_type(lines):
         if "..." in text:
             time.sleep(1)
 
-
+print("\n")
 intro_dialogue_seq = [
-    {'type': 'text', 'text': "Narrator: "},
-    {'type': 'narrate', 'text': "The Narrator stands over you as you open your weary eyes."},
+    {'type': 'narrate', 'text': "The Narrator stands over you as you open your weary eyes\n"},
     {'type': 'text', 'text': "..."}
 ]
 
 mixed_type(intro_dialogue_seq)
+
+time.sleep(1)
+
+type_text("\n\nNarrator: ")
+type_dialogue("You have to fight Gorlok right now. Sorry bro!")
+print("\n")
+
+time.sleep(1)
+
+run_battle()
