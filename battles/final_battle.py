@@ -19,7 +19,7 @@ def run_battle():
     weapon_cond = 1
     enemy_armor = 1
 
-    print(f"\n{enemy_name} has {enemy_hp} hitpoints.")
+    print(f"\n{enemy_name} has {enemy_hp} hit points.")
     print("...")
     print("He sneers at you and blows green snot from his nose.")
     print("...")
@@ -36,10 +36,10 @@ def run_battle():
             print(f"The enchanted sword does {int(enchanted_dmg)} damage to {enemy_name}!")
             print("...")
             if enemy_hp == 1:
-                print(f"{enemy_name} now has {enemy_hp} hitpoint.")
+                print(f"{enemy_name} now has {enemy_hp} hit point.")
                 print("...")
             else:
-                print(f"{enemy_name} now has {enemy_hp} hitpoints.")
+                print(f"{enemy_name} now has {enemy_hp} hit points.")
                 print("...")
         elif atk_1 == "no":
             print("...")
@@ -75,9 +75,9 @@ def run_battle():
         if enemy_hp < 50 and enemy_hp > 0:
             enemy_hp = int(enemy_hp * 1.03)
             if enemy_hp == 1:
-                print(f"{enemy_name} sips dat sweet, sweet health potion. He now has {int(enemy_hp)} hitpoint.")
+                print(f"{enemy_name} sips dat sweet, sweet health potion. He now has {int(enemy_hp)} hit point.")
             else:
-                print(f"{enemy_name} sips dat sweet, sweet health potion. He now has {int(enemy_hp)} hitpoints.")
+                print(f"{enemy_name} sips dat sweet, sweet health potion. He now has {int(enemy_hp)} hit points.")
                 print("...")
     if enemy_hp <= 0:
         print("...")

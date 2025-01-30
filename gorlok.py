@@ -1,9 +1,11 @@
 import sys
 import time
 from battles.final_battle import run_battle
+from battles.battle_tester import test_battle
 
 def type_narrate(text, delay=0.05):
     for char in text:
+        
         sys.stdout.write("\033[3m" + char + "\033[0m")
         sys.stdout.flush()
         time.sleep(delay)
@@ -32,7 +34,7 @@ def mixed_type(lines):
             type_narrate(text)
         elif line_type == 'dialogue':
             type_dialogue(text)
-        elif line_type == 'text'
+        elif line_type == 'text':
             type_text(text)
 
         if "..." in text:
@@ -55,4 +57,5 @@ print("\n")
 
 time.sleep(1)
 
-run_battle()
+# run_battle()
+test_battle()

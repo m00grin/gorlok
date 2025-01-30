@@ -8,4 +8,4 @@ class nether_axe:
 class rusty_spoon:
     def __init__(self):
         self.name = "Rusty Spoon"
-        self.damage = 30
+        self.damage = 2600
