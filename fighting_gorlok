@@ -46,7 +46,7 @@ while True:
                 break
             else:
                 print("...")
-                print("Game over, coward!")
+                print("Coward. Game over.")
                 exit()
         else:
             print("...")
