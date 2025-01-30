@@ -1,1 +1,32 @@
+# Python bytecode files
 __pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.env/
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE/editor specific
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Environment variables and secrets
+.env  # if you are using a .env file for environment variables
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
