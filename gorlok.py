@@ -2,6 +2,7 @@ import sys
 import time
 import pyfiglet
 from art import text2art
+from colorama import Fore, Back, Style
 from battles.final_battle import run_battle
 from battles.battle_tester import test_battle
 
@@ -42,9 +43,11 @@ def mixed_type(lines):
         if "..." in text:
             time.sleep(1)
 print("\n")
-ascii_art = text2art("GORLOK:\nORIGINS OF ICRAM")
-print(ascii_art)
-# print("\033[1;31m- Welcome to Gorlok: Origins of Icram -\033[0m")
+ascii_gorlok = text2art("GORLOK:")
+ascii_icram = text2art("ORIGINS OF ICRAM")
+print(Fore.RED + ascii_gorlok + Style.RESET_ALL)  # Red text
+print(Fore.YELLOW + ascii_icram + Style.RESET_ALL)  # Yellow text
+
 print()
 intro_dialogue_seq_1 = [
     {'type': 'narrate', 'text': "The Narrator stands over you as you regain consciousness\n"},
