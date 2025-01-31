@@ -17,3 +17,17 @@ Icram the Enchanter (also sneakily The Narrator)
 
 *Items*
 
+|Armor
+
+Plate Armor of Hades
+    The 'enchanted' (cursed) plate armor that Gorlok wears
+    It controls his mind / affect
+    Cursed by Icram, but it's got good stats
+
+|Weapons
+
+Nether Axe
+    Gorlok's ult weapon
+
+Rusty Spoon #might change
+    Player's ult? Not an actual spoon, maybe just a nickname for some kind of broadsword
