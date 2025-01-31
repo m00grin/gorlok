@@ -59,6 +59,3 @@ time.sleep(1)
 
 # run_battle()
 test_battle()
-
-def test_dummy():
-    pass
