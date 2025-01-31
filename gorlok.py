@@ -1,5 +1,7 @@
 import sys
 import time
+import pyfiglet
+from art import text2art
 from battles.final_battle import run_battle
 from battles.battle_tester import test_battle
 
@@ -40,22 +42,27 @@ def mixed_type(lines):
         if "..." in text:
             time.sleep(1)
 print("\n")
-print("\033[1;31m- Welcome to Gorlok: Origins of Icram -\033[0m")
+ascii_art = text2art("GORLOK:\nORIGINS OF ICRAM")
+print(ascii_art)
+# print("\033[1;31m- Welcome to Gorlok: Origins of Icram -\033[0m")
 print()
-intro_dialogue_seq = [
-    {'type': 'narrate', 'text': "The Narrator stands over you as you open your weary eyes\n"},
-    {'type': 'text', 'text': "..."}
+intro_dialogue_seq_1 = [
+    {'type': 'narrate', 'text': "The Narrator stands over you as you regain consciousness\n"},
+    {'type': 'text', 'text': "...\n"},
+    {'type': 'narrate', 'text': "You rub your eyes and take a look around... "},
+    {'type': 'narrate', 'text': "The ground starts to tremble beneath you, and the glint of an axe swings into view\n\n"},
+    {'type': 'narrate', 'text': "Almost involuntarily, you roll to the side, narrowly avoiding the axe's deadly arc\n\n"},
+    {'type': 'narrate', 'text': "You look up to see a massive figure standing over you, a hulking beast with a twisted grin\n\n"},
+    {'type': 'text', 'text': "\nThe Narrator: "},
+    {'type': 'dialogue', 'text': "Get up! Strike down Gorlok before he can swing the Nether Axe again!"},
+    {'type': 'text', 'text': "\n\n\n"},
 ]
 
-mixed_type(intro_dialogue_seq)
+mixed_type(intro_dialogue_seq_1)
 
 time.sleep(1)
 
-type_text("\n\nNarrator: ")
-type_dialogue("You have to fight Gorlok right now. Sorry bro!")
-print("\n")
-
 time.sleep(1)
 
-# run_battle()
-test_battle()
+run_battle()
+# test_battle()
