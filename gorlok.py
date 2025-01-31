@@ -67,5 +67,5 @@ time.sleep(1)
 
 time.sleep(1)
 
-run_battle()
-# test_battle()
+# run_battle()
+test_battle()
