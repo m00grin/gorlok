@@ -9,3 +9,4 @@ class rusty_spoon:
     def __init__(self):
         self.name = "Rusty Spoon"
         self.damage = 260
+        
