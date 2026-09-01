@@ -1,6 +1,7 @@
 # player stats and attributes
 
 from weapons.melee import rusty_spoon
+# from weapons.melee import nether_axe
 
 class player:
     def __init__(self):
@@ -8,3 +9,7 @@ class player:
         self.hp = 100
         self.armor = None
         self.weapon = rusty_spoon
+    def take_damage(self, amount_dmg):
+        self.hp -= amount_dmg
+        if self.hp < 0:
+            self.hp = 0

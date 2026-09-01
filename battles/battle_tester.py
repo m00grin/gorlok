@@ -23,7 +23,6 @@ def test_battle():
 
     atk_1 = input(f"Do you want to swing your {player_instance.weapon().name} at {enemy.name}? ").strip().lower()
 
-
     if atk_1 == "yes":
         damage = player_instance.weapon().damage  # Get the player's weapon damage
         print(f"{player_instance.weapon().name} does {int(damage)} damage to {enemy.name}!")

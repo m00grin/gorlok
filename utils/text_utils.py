@@ -20,3 +20,4 @@ def typewriter(text, speed=0.05, style=None):
         sys.stdout.flush()
         time.sleep(speed)
     print()
+    

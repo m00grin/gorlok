@@ -24,3 +24,4 @@ class gorlok:
         # Subtract the reduced damage from enemy's health
         self.hp -= reduced_damage
         return reduced_damage
+    
